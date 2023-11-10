@@ -1,0 +1,67 @@
+---
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: Parameterized ETL
+description: null
+version: 023dcb1a731bb0c5b0818f5d3af5a09b
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  color: yellow
+  months:
+    - 1
+    - 2
+    - 3
+  year: 2023
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 6a83ad11-a137-4105-ad1c-eed997a14515
+  _block_document_name: anonymous-994c462a-c7f2-4591-9ecb-25dd973ba831
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /home/vfamim/Documentos/engenheiro_dados/ny-taxi-project-data/marte
+entrypoint: ingestion.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      default: yellow
+      position: 0
+      type: string
+    year:
+      title: year
+      default: 1
+      position: 1
+      type: integer
+    months:
+      title: months
+      default: 1
+      position: 2
+      type: integer
+  required: null
+  definitions: null
+timestamp: '2023-11-09T19:08:28.793028+00:00'
+triggers: []
+enforce_parameter_schema: null

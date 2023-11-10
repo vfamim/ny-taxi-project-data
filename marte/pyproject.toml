@@ -12,6 +12,8 @@ prefect = "^2.14.3"
 sqlalchemy = "^2.0.23"
 psycopg2-binary = "^2.9.9"
 pyarrow = "^14.0.1"
+prefect-gcp = "^0.5.1"
+pandas-gbq = "^0.19.2"
 
 
 [build-system]
