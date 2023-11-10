@@ -1,0 +1,46 @@
+[0m15:28:21.517028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe649e7b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe649e7b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe649e7e50>]}
+
+
+============================== 15:28:21.577370 | 3e6591c3-f6c6-4a4e-8318-9d29032a66d3 ==============================
+[0m15:28:21.577370 [info ] [MainThread]: Running with dbt=1.7.1
+[0m15:28:21.580802 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/vfamim/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:28:21.582696 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/vfamim/.dbt')}
+[0m15:28:21.584092 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:28:35.610580 [debug] [MainThread]: Starter project path: /home/vfamim/.cache/pypoetry/virtualenvs/dbt-trip-data-5JFCzZQt-py3.11/lib/python3.11/site-packages/dbt/include/starter_project
+[0m15:28:35.617780 [info ] [MainThread]: 
+Your new dbt project "ny_trip_data" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:28:35.619133 [info ] [MainThread]: Setting up your profile.
+[0m15:31:15.600513 [info ] [MainThread]: Profile ny_trip_data written to /home/vfamim/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:31:15.608273 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 174.09653, "process_user_time": 11.142749, "process_kernel_time": 0.903042, "process_mem_max_rss": "130716", "process_in_blocks": "608", "process_out_blocks": "46136"}
+[0m15:31:15.611561 [debug] [MainThread]: Command `dbt init` succeeded at 15:31:15.610696 after 174.10 seconds
+[0m15:31:15.613977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe649f7bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6328ef50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6938f850>]}
+[0m15:31:15.616453 [debug] [MainThread]: Flushing usage events
+[0m16:28:56.251683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9be9117210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9be83c3b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9be83c3090>]}
+
+
+============================== 16:28:56.260765 | 6ec9e3eb-398c-444f-bb14-80a86eb9ba20 ==============================
+[0m16:28:56.260765 [info ] [MainThread]: Running with dbt=1.7.1
+[0m16:28:56.263209 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/vfamim/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:28:56.265030 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/vfamim/Documentos/engenheiro_dados/ny-taxi-project-data/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:28:56.267598 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.15440041, "process_user_time": 7.197789, "process_kernel_time": 0.533779, "process_mem_max_rss": "97644", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m16:28:56.269571 [debug] [MainThread]: Command `dbt run` failed at 16:28:56.269040 after 0.16 seconds
+[0m16:28:56.271494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9beca03a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9be823bb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9be9116fd0>]}
+[0m16:28:56.274172 [debug] [MainThread]: Flushing usage events
