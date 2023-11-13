@@ -1,5 +1,4 @@
 ## 0.0. Proposta
----
 O objetivo deste projeto é criar um fluxo de trabalho para ingerir dados de taxi yellow do site da TLC (https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), armazená-los no Google Cloud Storage para que a equipe de Data Science possa montar previsões.
 
 ### Requisitos
@@ -26,12 +25,10 @@ O objetivo deste projeto é criar um fluxo de trabalho para ingerir dados de tax
 Este projeto é importante para garantir a disponibilidade e a qualidade dos dados de taxi yellow. Os dados ingeridos podem ser usados para uma variedade de aplicações, como análise de transporte, planejamento urbano e marketing.
 
 ## 1.0. Arquitetura
----
 
 ![diagram](img/diagrama1.png)
 
 ### 1.1. Sobre os dados utilizados
----
 - Os registros de viagens de táxis amarelos e verdes incluem informações como datas e horários de embarque e desembarque, locais de embarque e desembarque, distâncias, tarifas, tipos de pagamento e contagens de passageiros.
 - Os registros de viagens de veículos de aluguel (FHV) incluem informações sobre a base de despacho, datas e locais de embarque.
 - Os dados de registros de viagens de táxis e FHV são fornecidos por provedores de tecnologia e bases autorizados.
@@ -87,7 +84,6 @@ Para transformação dos dados iremos utilizar o DBT (Data Build Tool) que é um
 Iremos integrar o dbt com o Big Query do plataforma do Google Cloud.
 
 ## 2.0. Plataforma
----
 A plataforma para gerenciar e fazer todas as etapas end-to-end será a Google Cloud Plataform (GCP), uma plataforma em nuvem que oferece uma ampla gama de serviços para nossa ingestão de dados. 
 GCP é organizado por *projetos*. Podemos criar projetos e acessa-los pelo dashboard principal.
 Então nosso primeiro passo é criar um novo projeto e um *service account*, onde iremos fazer o download da chave de autorização (authentication keys) para o nosso computador. Um *service account* é como uma conta de usuário mas para apps e workloads, você cria uma chave que te da permissões para uso de recursos avaliados na plataforma.
