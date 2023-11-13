@@ -28,29 +28,7 @@ Este projeto é importante para garantir a disponibilidade e a qualidade dos dad
 ## 1.0. Arquitetura
 ---
 
-```plantuml
-
-package "Extraction" {
-	[Python] -> [Prefect]
-}
-
-cloud "GCP" {
-	[Google Storage] <-> [Big Query]
-}
-
-package "Transformation" {
-	[dbt]
-}
-
-cloud "Load" {
-	[Looker Studio]
-}
-
-[Website] --> [Extraction]
-[Extraction] --> [GCP]
-[GCP] <--> [Transformation]
-[Transformation] --> [Load]
-```
+![diagram](img/diagrama1.png)
 
 ### 1.1. Sobre os dados utilizados
 ---
