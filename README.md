@@ -26,7 +26,7 @@ Este projeto é importante para garantir a disponibilidade e a qualidade dos dad
 
 ## 1.0. Arquitetura
 
-![diagram](img/diagrama1.png)
+![diagram](utilities/img/diagrama1.png)
 
 ### 1.1. Sobre os dados utilizados
 - Os registros de viagens de táxis amarelos e verdes incluem informações como datas e horários de embarque e desembarque, locais de embarque e desembarque, distâncias, tarifas, tipos de pagamento e contagens de passageiros.

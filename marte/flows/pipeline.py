@@ -1,10 +1,10 @@
 import pandas as pd
+from pathlib import Path
 from prefect import flow, task
+from prefect_dbt.cli.commands import DbtCoreOperation
 from prefect_gcp import GcpCredentials
 from prefect_gcp.cloud_storage import GcsBucket
 
-# TODO: Salvar os arquivos parquet com o nome do mês e ano
-# TODO: Transformar o arquivo em dimensão -> fato
 # TODO: Configurar arquivo dockers
 # TODO: Criar restrição para arquivos faltantes (checar se o mês existe)
 
@@ -63,7 +63,18 @@ def write_BQ(dataframe: pd.DataFrame) -> None:
     )
 
 
-@flow()
+@task()
+def trigger_dbt_flow() -> str:
+    """Run the dbt transformations on our BigQuery table"""
+    dbt_path = Path('dbt/ny_trip_data').absolute()
+    result = DbtCoreOperation(
+        commands=['dbt build'],
+        project_dir=str(dbt_path),
+    ).run()
+    return result
+
+
+@flow(log_prints=True)
 def etl_parent_flow(color: str = 'yellow', year: int = 1, months: int = 1):
     """Main ETL flow to load data into GCS and Big Query"""
     file_name = file_to_extract(color, year, months)
@@ -71,10 +82,11 @@ def etl_parent_flow(color: str = 'yellow', year: int = 1, months: int = 1):
     df = transform_data(raw_df)
     upload_to_gcs(df, file_name)
     write_BQ(df)
+    trigger_dbt_flow()
 
 
 if __name__ == '__main__':
     color = 'yellow'
     year = 2023
-    month = 1
+    month = 2
     etl_parent_flow(color, year, month)

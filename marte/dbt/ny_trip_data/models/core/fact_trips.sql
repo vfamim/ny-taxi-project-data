@@ -15,7 +15,7 @@ select
     yd.tripid, 
     yd.vendorid, 
     yd.service_type,
-    yd.ratecodeid, 
+    yd.ratecodeid,
     yd.pickup_locationid, 
     dz.borough as pickup_borough, 
     dz.zone as pickup_zone, 
