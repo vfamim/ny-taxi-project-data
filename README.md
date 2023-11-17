@@ -117,8 +117,5 @@ Por favor, siga estes passos:
         - Visualizador já deve estar presente como uma função.
 2. Habilite as APIs para o projeto (elas são necessárias para que o Terraform possa interagir com o GCP):
     
-    - https://console.cloud.google.com/apis/library/iam.googleapis.com: https://console.cloud.google.com/apis/library/iam.googleapis.com
-    - https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com: https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com
-    
-4. Certifique-se de que a variável de ambiente GOOGLE_APPLICATION_CREDENTIALS esteja definida.
+3. Certifique-se de que a variável de ambiente GOOGLE_APPLICATION_CREDENTIALS esteja definida.
 
