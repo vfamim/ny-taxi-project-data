@@ -17,6 +17,22 @@ pyarrow = "^14.0.1"
 prefect-gcp = "^0.5.1"
 pandas-gbq = "^0.19.2"
 
+
+[tool.poetry.group.dev.dependencies]
+ignr = "^2.2"
+taskipy = "^1.12.2"
+ruff = "^0.1.8"
+blue = "^0.9.1"
+isort = "^5.13.2"
+pytest = "^7.4.3"
+
+[tool.taskipy.tasks]
+lint = 'ruff . && blue --check . --diff'
+format = 'blue . && isort .'
+dbt_build = 'dbt build --project-dir dbt/ny_trip_data'
+dbt_run = 'dbt run --project-dir dbt/ny_trip_data'
+prefect_init = 'prefect server start'
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
